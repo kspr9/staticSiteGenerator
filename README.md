@@ -1,0 +1,2 @@
+# staticSiteGenerator
+Boot.dev project
