@@ -1,4 +1,6 @@
+
 from textnode import TextNode, TextType
+
 
 def main():
     #The function should create a new TextNode object with some dummy values

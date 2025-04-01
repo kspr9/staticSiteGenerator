@@ -1,4 +1,6 @@
 from enum import Enum
+from leafnode import LeafNode
+
 
 class TextType(Enum):
     # 
@@ -10,6 +12,7 @@ class TextType(Enum):
         Links, in this format: [anchor text](url)
         Images, in this format: ![alt text](url)
     '''
+    TEXT = "text"
     NORMAL = "normal"
     BOLD = "bold"
     ITALIC = "italic"
@@ -18,6 +21,10 @@ class TextType(Enum):
     IMAGE = "image"
 
 class TextNode:
+    '''
+    A text node is a node that contains text.
+    It can be a normal text, a bold text, an italic text, a code text, a link, or an image.
+    '''
     def __init__(self, text: str, text_type: TextType, url: str = None):
         self.text = text
         self.text_type = text_type
@@ -35,5 +42,4 @@ class TextNode:
     def __repr__(self):
         # returns a string representation of the TextNode object
         return f"TextNode({self.text}, {self.text_type.value}, {self.url})"
-    
     
