@@ -1,6 +1,6 @@
 from enum import Enum
 
-from textnode import TextType, TextNode
+from .textnode import TextType, TextNode
 
 
 def split_nodes_delimiter(old_nodes, delimiter, text_type):
@@ -43,10 +43,10 @@ def split_nodes_delimiter(old_nodes, delimiter, text_type):
                 parts.append(TextNode(current_text[:first_index], TextType.TEXT))
                 
             # Add text between delimiters with the specified text type
-            parts.append(TextNode(current_text[first_index+1:second_index], text_type))
+            parts.append(TextNode(current_text[first_index+len(delimiter):second_index], text_type))
             
             # Continue with the rest of the text
-            current_text = current_text[second_index+1:]
+            current_text = current_text[second_index+len(delimiter):]
             
         # Add any remaining text
         if current_text:

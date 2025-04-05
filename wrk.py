@@ -1,6 +1,9 @@
 node = "This is text with a `code block` word"
 delimiter = "`"
+delimiter2 = "**"
 
+
+print(len(delimiter2))
 first_index = node.find(delimiter)
 second_index = node.find(delimiter, first_index + 1)
 
