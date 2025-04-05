@@ -4,7 +4,7 @@ Create a few nodes and make sure the props_to_html method works as expected.
 '''
 
 import unittest
-from htmlnode import HTMLNode
+from ..htmlnode import HTMLNode
 
 class TestHTMLNode(unittest.TestCase):
     def test_props_to_html(self):
